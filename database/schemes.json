@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Ayushman Bharat PM-JAY",
+    "state": "All India",
+    "description": "Government health protection scheme for eligible beneficiaries.",
+    "benefits": "Cashless and paperless access to eligible healthcare services.",
+    "eligibility": "Eligibility depends on the applicable government beneficiary criteria.",
+    "occupation": "All",
+    "gender": "All",
+    "category": "All",
+    "apply": "https://pmjay.gov.in/"
+  },
+  {
+    "name": "Mahatma Jyotirao Phule Jan Arogya Yojana",
+    "state": "Maharashtra",
+    "description": "A Maharashtra government health programme that provides healthcare support to eligible beneficiaries through participating hospitals.",
+    "benefits": "Eligible beneficiaries can receive healthcare services according to the applicable scheme rules and covered procedures.",
+    "eligibility": "Eligibility depends on the applicable Maharashtra government criteria, beneficiary category and other scheme requirements.",
+    "occupation": "All",
+    "gender": "All",
+    "category": "All",
+    "apply": "https://www.jeevandayee.gov.in/"
+  }
+]

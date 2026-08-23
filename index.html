@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SchemeSaathi - Government Scheme Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            🇮🇳 SchemeSaathi
+        </div>
+
+        <nav>
+    <a href="#home" data-i18n="navHome">Home</a>
+    <a href="#about" data-i18n="navAbout">About</a>
+    <a href="#schemes" data-i18n="navSchemes">Schemes</a>
+    <a href="#contact" data-i18n="navContact">Contact</a>
+
+    <select id="languageSelector" class="language-selector" aria-label="Select Language">
+        <option value="en">English</option>
+        <option value="hi">हिंदी</option>
+        <option value="mr">मराठी</option>
+    </select>
+</nav>
+    </header>
+
+
+    <main>
+
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <p class="tagline" data-i18n="heroTagline">
+    AI-POWERED GOVERNMENT SCHEME ASSISTANT
+</p>
+
+<h1>
+    <span data-i18n="heroTitle">Find Government Schemes</span>
+    <span data-i18n="heroTitleSpan">Made for You</span>
+</h1>
+
+<p class="hero-text" data-i18n="heroDescription">
+    Get personalized government scheme recommendations based on your age, income, occupation, location and other personal information.
+</p>
+
+<button onclick="startAssistant()" data-i18n="findSchemes">
+    Find My Schemes →
+</button>
+            </div>
+
+            <div class="hero-card">
+                <div class="ai-icon">🤖</div>
+                <h3 data-i18n="heroCardTitle">Smart Recommendations</h3>
+                <p data-i18n="aiDescription">
+                    Smart recommendations for citizens
+                </p>
+
+
+                <div class="mini-feature" data-i18n="personalized">
+                    ✓ Personalized scheme matching
+                </div>
+
+                <div class="mini-feature" data-i18n="easyEligibility">
+                    ✓ Easy eligibility checking
+                </div>
+
+                <div class="mini-feature" data-i18n="governmentInfo">
+                    ✓ Government scheme information
+                </div>
+            </div>
+
+        </section>
+
+
+        <section id="about" class="about">
+
+            <p class="section-label" data-i18n="aboutLabel">
+              ABOUT THE PROJECT
+            </p>
+
+            <h2 data-i18n="aboutTitle">
+             One Assistant. Many Government Benefits.
+            </h2>
+
+            <p data-i18n="aboutText">
+             SchemeSaathi is an AI-powered assistant designed to help citizens discover
+             government schemes that may be relevant to their personal profile.
+            </p>
+
+        </section> 
+
+<section id="profile" class="about"> 
+    <h2 data-i18n="profileTitle">Tell Us About Yourself</h2> 
+    <p data-i18n="profileDescription"> 
+        Share a few details about yourself to help SchemeSaathi find 
+        government schemes that may be relevant to your needs. 
+    </p>
+
+    <div class="feature-container">
+        <div class="feature-card">
+           <h3 data-i18n="personalizedRecommendations">
+    Personalized Recommendations
+</h3>
+
+<p data-i18n="personalizedRecommendationsDescription">
+    Get government scheme suggestions based on your personal profile,
+    needs and eligibility.
+</p>
+        </div>
+
+        <div class="feature-card">
+           <h3 data-i18n="easyEligibilityCheck">
+    Easy Eligibility Check
+</h3>
+
+<p data-i18n="easyEligibilityCheckDescription">
+    Quickly understand which schemes you may be eligible
+    for and what documents you may need.
+</p>
+        </div>
+    </div>
+</section>
+
+        <section id="schemes" class="features">
+
+            <p class="section-label" data-i18n="howLabel">
+             HOW IT WORKS
+            </p>
+
+            <h2 data-i18n="howTitle">
+             Simple. Smart. Personalized.
+            </h2>
+            <p data-i18n="howDescription">
+
+            <div class="feature-container">
+
+                <div class="feature-card">
+                    <div>👤</div>
+                  <h3 data-i18n="step1Title">
+                   1. Create Your Profile
+                  </h3>
+                    <p data-i18n="step1Text">
+                        Enter basic information about yourself.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div>🧠</div>
+                    <h3 data-i18n="step2Title">
+                        2. AI Analysis
+                    </h3>
+                    <p data-i18n="step2Text">
+                        The system analyzes your profile and eligibility.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div>🎯</div>
+                    <h3 data-i18n="step3Title">
+                    3. Get Recommendations
+                      </h3>
+                    <p data-i18n="step3Text">
+                        Receive government schemes matched to your profile.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="assistant-section" id="assistant">
+
+            <p class="section-label" data-i18n="assistantLabel">
+                SCHEME ASSISTANT
+            </p>
+
+            <h2 data-i18n="assistantTitle">
+                Let's Find Schemes For You
+            </h2>
+
+            <p data-i18n="assistantText">
+                Click below to start your personalized scheme search.
+            </p>
+
+            <button onclick="openProfileForm()" data-i18n="startProfile">
+    Start Profile →
+</button>
+            <div class="voice-assistant-box">
+
+    <button type="button" id="voiceButton" class="voice-button" data-i18n="voiceRequirements">
+    🎤 Speak Your Requirements
+</button>
+
+    <p id="voiceStatus" class="voice-status" data-i18n="voiceStatus">
+    Click the microphone and tell us what you need.
+</p>
+
+    <p id="voiceText" class="voice-text"></p>
+
+</div>
+
+        </section>
+
+
+        <section id="contact" class="contact">
+
+            <h2>SchemeSaathi</h2>
+
+            <p>
+                AI Assistant for Government Schemes
+            </p>
+
+            <p>
+                PO7 — Internal Hackathon 2026
+            </p>
+
+        </section>
+<section class="why-choose">
+    <div class="section-heading">
+    <span data-i18n="whyLabel">WHY SCHEMESAATHI?</span>
+
+    <h2 data-i18n="whyTitle">
+        One Smart Place for Government Schemes
+    </h2>
+
+    <p data-i18n="whyDescription">
+        SchemeSaathi helps citizens discover relevant government
+        schemes through a simple, personalized and user-friendly
+        process.
+    </p>
+</div>
+
+    <div class="why-choose-container">
+
+        <div class="why-card">
+    <div class="why-icon">🤖</div>
+    <h3 data-i18n="featureAI">AI-Powered Recommendations</h3>
+            <p data-i18n="featureAIDescription">
+    Get scheme recommendations based on your profile,
+    including age, occupation, income and other details.
+</p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">🎯</div>
+            <h3 data-i18n="featureMatching">Personalized Matching</h3>
+            <p data-i18n="featureMatchingDescription">
+                Get scheme recommendations based on your profile,
+                eligibility details and selected requirements.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">🔍</div>
+            <h3 data-i18n="whyCard3">Easy to Discover</h3>
+            <p> data-i18n="whyCard3Text">
+                Search and explore government schemes through a simple,
+                user-friendly interface.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">🔗</div>
+            <h3 data-i18n="whyCard4">Official Government Portals Links</h3>
+            <p data-i18n="whyCard4Text">
+                Quickly access the official government portal to verify
+                scheme details and eligibility.
+            </p>
+        </div>
+
+    </div>
+</section>
+    </main>
+    <section class="how-it-works">
+    <div class="how-it-works-header">
+    <p class="section-label" data-i18n="howLabel">HOW IT WORKS</p>
+        <h2 data-i18n="howTitle">Find Government Schemes in 3 Simple Steps</h2>
+        <p>
+        <p data-i18n="howDescription">
+         SchemeSaathi makes it easier to discover government schemes
+         that may be relevant to you.
+    </p>
+        </p>
+    </div>
+
+    <div class="steps-container">
+
+        <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-icon">👤</div>
+            <h3 data-i18n="stepOneTitle">
+                Enter Your Details
+            </h3>
+            <p>
+                <p data-i18n="stepOneText">
+    Provide basic information such as your age, occupation,
+    income and other eligibility details.
+</p>
+            </p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-icon">🤖</div>
+            <h3 data-i18n="stepTwoTitle">
+                AI Checks Your Profile
+            </h3>
+            <p>
+                <p data-i18n="stepTwoText">
+    SchemeSaathi analyzes your information and compares it
+    with available government scheme criteria.
+</p>
+            </p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-icon">🎯</div>
+            <h3 data-i18n="stepThreeTitle">
+                Get Matching Schemes
+            </h3>
+             <p data-i18n="stepThreeText">
+    Receive personalized scheme recommendations with
+    matched percentages, benefits and eligibility details.
+</p>
+             </div>
+
+    </div>
+</section>
+<section class="why-choose">
+    <div class="section-container">
+
+        <div class="section-heading">
+            <span data-i18n="whyLabel">WHY SCHEMESAATHI?</span>
+            <h2 data-i18n="whyTitle">
+    One Smart Place for Government Schemes
+</h2>
+            <p data-i18n="whyDescription">
+                SchemeSaathi helps citizens discover relevant government
+                schemes through a simple, personalized and user-friendly
+                process.
+            </p>
+        </div>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3 data-i18n="featureAI">AI-Powered Recommendations</h3>
+
+<p data-i18n="featureAIDescription">
+    Get scheme recommendations based on your profile,
+    including age, occupation, income and other details.
+</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3 data-i18n="featureMatching">Personalized Matching</h3>
+
+<p data-i18n="featureMatchingDescription">
+    Schemes are matched with your information and displayed
+    with an easy-to-understand match percentage.
+</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3 data-i18n="featureEligibility">Eligibility Information</h3>
+
+<p data-i18n="featureEligibilityDescription">
+    Understand the important eligibility conditions,
+    benefits and other information before applying.
+</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔗</div>
+                <h3 data-i18n="featurePortals">Official Government Portals</h3>
+
+<p data-i18n="featurePortalsDescription">
+    Access the official scheme portal directly from
+    the recommendation details.
+</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- IMPACT & COVERAGE SECTION -->
+<section class="impact-section">
+    <div class="impact-container">
+
+        <div class="impact-heading">
+    <span data-i18n="impactLabel">
+        SCHEMESAATHI AT A GLANCE
+    </span>
+
+    <h2 data-i18n="impactTitle">
+        Making Government Schemes Easier to Discover
+    </h2>
+
+    <p data-i18n="impactDescription">
+        A simple digital assistant designed to help citizens
+        discover schemes that may be relevant to their profile.
+    </p>
+</div>
+
+        <div class="impact-grid">
+
+            <div class="impact-card">
+                <div class="impact-number">15+</div>
+               <h3 data-i18n="impactSchemes">Government Schemes</h3>
+<p data-i18n="impactSchemesText">Scheme information available for different citizen needs.</p>
+            </div>
+
+            <div class="impact-card">
+                <div class="impact-number">6+</div>
+                <h3 data-i18n="impactCriteria">Matching Criteria</h3>
+<p data-i18n="impactCriteriaText">Profile information used to calculate scheme relevance.</p>
+            </div>
+
+            <div class="impact-card">
+                <div class="impact-number">100%</div>
+                <h3 data-i18n="impactResults">Personalized Results</h3>
+<p data-i18n="impactResultsText">Recommendations are generated according to the user's profile.</p>
+            </div>
+
+            <div class="impact-card">
+                <div class="impact-number">🔗</div>
+                <h3 data-i18n="impactPortals">Official Portals</h3>
+<p data-i18n="impactPortalsText">Users can visit the relevant official scheme portal.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- FAQ SECTION -->
+<section class="faq-section">
+    <div class="faq-container">
+
+        <div class="faq-heading">
+
+    <span data-i18n="faqLabel">FAQ</span>
+
+    <h2 data-i18n="faqTitle">
+        Frequently Asked Questions
+    </h2>
+
+    <p data-i18n="faqDescription">
+        Find quick answers about SchemeSaathi and how it helps
+        users discover government schemes.
+    </p>
+
+</div>
+
+        <div class="faq-list">
+
+            <details class="faq-item">
+                <summary data-i18n="faqWhat">What is SchemeSaathi?</summary>
+                <p data-i18n="faq1a">
+    SchemeSaathi is an AI-powered government scheme assistant
+    that helps citizens discover government schemes that may
+    be relevant to their personal profile.
+</p>
+            </details>
+
+            <details class="faq-item">
+                <summary data-i18n="faqRecommend">How does SchemeSaathi recommend schemes?</summary>
+                <p data-i18n="faq2a">
+                    SchemeSaathi uses information provided in the user's
+                    profile, such as age, occupation, category, income and
+                    other available criteria, to calculate a preliminary
+                    matching score for government schemes.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary data-i18n="faqInformation">
+                    What information is used for matching?
+                </summary>
+                <p data-i18n="faq3a">
+                    Depending on the scheme, the system can consider profile
+                    information such as age, gender, category, occupation,
+                    disability status and income.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary data-i18n="faqGuarantee">
+                    Does SchemeSaathi guarantee my eligibility?
+                </summary>
+                <p data-i18n="faq4a">
+                    No. The recommendations are preliminary and are intended
+                    to help users discover potentially relevant schemes.
+                    Final eligibility must always be verified using the
+                    applicable official government scheme guidelines.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary data-i18n="faqPortal">
+                    Can I access the official government portal?
+                </summary>
+                <p data-i18n="faq5a">
+                    Yes. Scheme details include a link to the relevant
+                    official government portal whenever an official link
+                    is available.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary data-i18n="faqReport">
+                    Can I save my recommendation report?
+                </summary>
+                <p data-i18n="faq6a">
+                    Yes. After receiving recommendations, users can use the
+                    Download / Save Recommendation Report option to generate
+                    a printable report that can be saved as a PDF.
+                </p>
+            </details>
+
+        </div>
+
+    </div>
+</section>
+<footer>
+        <p>© 2026 SchemeSaathi | Government Scheme AI Assistant</p>
+    </footer>
+
+
+    <script src="./script.js?v=4"></script>
+    <!-- AI CHATBOT -->
+<button id="chatbot-toggle" class="chatbot-toggle" type="button">
+    🤖
+</button>
+
+<div id="chatbot" class="chatbot">
+    <div class="chatbot-header">
+        <div>
+            <strong>SchemeSaathi AI</strong>
+            <small>Government Scheme Assistant</small>
+        </div>
+
+        <button id="chatbot-close" type="button">×</button>
+    </div>
+
+    <div id="chatbot-messages" class="chatbot-messages">
+        <div class="chatbot-message bot">
+            Hello! 👋 I am SchemeSaathi AI.
+            <br>
+            Ask me about government schemes, eligibility or benefits.
+        </div>
+    </div>
+
+    <div class="chatbot-input-area">
+
+    <button
+        id="chatbot-voice"
+        type="button"
+        title="Voice input"
+        aria-label="Voice input"
+    >
+        🎤
+    </button>
+
+    <input
+        id="chatbot-input"
+        type="text"
+        placeholder="Ask about government schemes..."
+    >
+
+    <button
+        id="chatbot-send"
+        type="button"
+        aria-label="Send message"
+    >
+        ➤
+    </button>
+
+</div>
+</body>
+</html>
